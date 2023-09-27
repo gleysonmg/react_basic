@@ -88,7 +88,6 @@ function App() {
       <Saudacao nomeState={nomeState} />
 
       <h3>React Router Dom</h3>
-      
       <Router>
         <Navbar />
         <Routes>
