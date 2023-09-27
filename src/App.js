@@ -10,6 +10,16 @@ import Pessoa from './components/Pessoa';
 import Saudacao from './components/Saudacao';
 import SayMyName from './components/SayMyName';
 import SeuNome from './components/SeuNome';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+
+/* Pages */
+import Home from './pages/Home'
+import Contato from './pages/Contato'
+import Empresa from './pages/Empresa'
+
+/* React Router */
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   const [nomeState, setNomeState] = useState()
@@ -76,6 +86,18 @@ function App() {
       <SeuNome setNomeState={setNomeState} />
       <p>Nome: {nomeState}</p>
       <Saudacao nomeState={nomeState} />
+
+      <h3>React Router Dom</h3>
+      
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/empresa" element={<Empresa />} />
+        </Routes>
+        <Footer />
+      </Router>
       
     </div>
   );
