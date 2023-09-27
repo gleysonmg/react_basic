@@ -3,7 +3,7 @@ import Item from "./Item"
 function List() {
     return (
         <>
-            <h1>Minha Lista</h1>
+            <h4>Minha Lista</h4>
             <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
